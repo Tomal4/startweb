@@ -1,0 +1,3 @@
+W przeglądarce otworzyć localhost/phpmyadmin
+1) zaimportować plik db.sql
+2) wejść do bazy startweb i zaimportować plik starweb.sql
