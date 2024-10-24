@@ -17,7 +17,6 @@ if(!empty($_POST))
 		isEmail('E-mail', $_POST['email']);
 		compareFields($_POST['password'], $_POST['password2']);
 	}
-	displayErrors();
 	
 	if (!$isError)
 	{
@@ -37,22 +36,28 @@ if(!empty($_POST))
 if (isset($_REQUEST['action']))
 {
 	$action = $_REQUEST['action'];
+
 	switch ($action)
 	{
 		case 'delete':
-
+			$sql = 'DELETE FROM users WHERE id = ' . (int) $_GET['id'];
+			if ($db->query($sql))
+			{
+				echo 'Data was deleted';
+			}
 			break;
 	}
 }
 
-
 ?>
 
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
     <head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
 		<link rel="stylesheet" href="assets/css/style.css" />
+		<script type="text/javascript" src="assets/js/bootstrap/bootstrap.min.js"></script>
 	</head>
 	
 	<body>
@@ -61,7 +66,6 @@ if (isset($_REQUEST['action']))
 			<?php include ('templates/form.html.php'); ?>
 		</section>
 		<section class="content">
-			<h1 class="align-center">Lista użytkowników</h1>
 			<?php include ('templates/users.html.php'); ?>
 		</section>
 	</body>

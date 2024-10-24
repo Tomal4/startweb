@@ -46,7 +46,7 @@ function displayErrors()
     global $isError, $msg;
     if($isError)
     {
-        $html = '<div class="message"><ul class="error">';
+        $html = '<div class="alert alert-danger"><ul class="error">';
         foreach ($msg as $m)
         {
             $html .= '<li>' . $m . '</li>';

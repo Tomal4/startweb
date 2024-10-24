@@ -10,7 +10,7 @@ html, body
 	color:#444;
 	-webkit-font-smoothing: subpixel-antialiased !important;
 }
-
+/*
 input
 {
 	border: 0 none;
@@ -81,8 +81,8 @@ input
 	display: inline-block;
 	margin-right: 10px;
 	color: #444;
-	text-decoration: none;
 	opacity: 0.5;
+	text-decoration: none;
 	transition: all .3s ease;
 }
 
@@ -93,7 +93,7 @@ input
 
 .action i
 {
-	margin-right: 3px;
+	margin-right: 5px;
 }
 
 .message
@@ -116,7 +116,7 @@ input
 .error::before
 {
 	position: absolute;
-	margin: 10px 0 0 10px;
+	margin: 5px 0 0 -20px;
     font: normal normal normal 20px/1 FontAwesome;
     content: "\f06a";
     color: #C31B00;
@@ -126,6 +126,45 @@ input
 {
     display: block;
     padding: 5px;
+}
+*/
+
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,100,700,900&subset=latin,latin-ext);
+@import url('font-awesome.min.css');
+
+html, body
+{
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color:#444;
+	-webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+.content
+{
+	padding: 60px 0;
+}
+
+.action
+{
+	display: inline-block;
+	margin-right: 10px;
+	color: #ccc;
+	text-decoration: none;
+	opacity: 0.5;
+	transition: all .3s ease;
+}
+
+.action:hover
+{
+	opacity: 1;
+}
+
+.action i
+{
+	margin-right: 3px;
 }
 
 .align-center
@@ -140,3 +179,4 @@ input
 
 .color-green {color: green;}
 .color-red {color: red;}
+.color-gold {color: gold;}
